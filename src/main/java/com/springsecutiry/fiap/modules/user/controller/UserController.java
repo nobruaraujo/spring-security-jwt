@@ -18,8 +18,8 @@ public class UserController {
     @Autowired
     private UserRepository repository;
 
-     @GetMapping
-    public ResponseEntity getAllUsers(){
+    @GetMapping
+    public ResponseEntity getAllUsers() {
         List<User> users = this.repository.findAll();
 
         return ResponseEntity.ok(users);
